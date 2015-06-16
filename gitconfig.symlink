@@ -1,0 +1,35 @@
+[alias]
+	a = add
+	s = status
+	b = branch
+	ci = commit
+	co = checkout
+
+	lg = log --graph '--pretty=tformat:%Cblue%h%Creset %Cgreen%ar%Creset %Cblue%d%Creset %s (%an)'
+
+	st = stash
+	stp = stash pop
+	stl = stash list
+
+	su = submodule update
+	sur = submodule update --init --recursive
+
+	up = "!git remote update -p; git merge --ff-only @{u}"
+	pushup = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
+	upsub = "!f() { cd $1 && git checkout master && git pull && git sur; }; f"
+	upsuba = "!git submodule foreach 'git checkout master && git pull && git sur'"
+	br = "!f() { git checkout master && git branch -D $1 && git branch $1 && git checkout $1; }; f"
+
+[user]
+	name = Misha Karpenko
+	email = me@mkarp.co
+
+[color]
+	ui = true
+
+[push]
+	default = simple
+
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

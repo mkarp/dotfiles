@@ -1,0 +1,16 @@
+export TERM=xterm-256color
+export CLICOLOR=1
+export LSCOLORS=Gxfxcxdxbxegedabagacad
+
+autoload -U compinit
+compinit
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+plugins=(git)
+
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+
+PATH=$PATH:$HOME/.rvm/bin
+
+export LC_ALL="en_US.UTF-8"
