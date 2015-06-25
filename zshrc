@@ -35,4 +35,5 @@ alias wrk="cd $WRK"
 alias dot="cd $DOT"
 alias remove_dashboard="defaults write com.apple.dashboard mcx-disabled -boolean YES; killall Dock"
 alias remove_derived_data="rm -rf ~/Library/Developer/Xcode/DerivedData"
+alias lock="open -a ScreenSaverEngine"
 

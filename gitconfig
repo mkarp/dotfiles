@@ -30,3 +30,6 @@
   clean = git-media-clean %f
   smudge = git-media-smudge %f
 
+[user]
+  name = Mykhailo Karpenko
+  email = me@mkarp.co
