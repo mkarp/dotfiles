@@ -20,8 +20,17 @@ plugins=(gitfast brew gem osx)
 
 # User configuration
 export PATH=$PATH:/usr/local/bin:$HOME/.rvm/bin
+export WRK="$HOME/Workspace"
 
+# Load zsh
 source $ZSH/oh-my-zsh.sh
 
 # Set the language environment
 export LANG=en_US.UTF-8
+
+# Personal aliases
+alias zshrc="vim ~/.zshrc"
+alias wrk="cd $WRK"
+alias remove_dashboard="defaults write com.apple.dashboard mcx-disabled -boolean YES; killall Dock"
+alias remove_derived_data="rm -rf ~/Library/Developer/Xcode/DerivedData"
+
