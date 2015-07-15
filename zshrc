@@ -5,6 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 export PATH=$PATH:/usr/local/bin:$HOME/.rvm/bin
 export WRK="$HOME/Workspace"
 export DOT="$WRK/dotfiles"
+export DD="~/Library/Developer/Xcode/DerivedData"
 
 # Set name of the theme to load
 # Look in ~/.oh-my-zsh/themes/
@@ -36,6 +37,8 @@ alias dot="cd $DOT"
 alias remove_dashboard="defaults write com.apple.dashboard mcx-disabled -boolean YES; killall Dock"
 alias kill_xcode="killall Xcode"
 alias open_xcode="open /Applications/Xcode.app"
-alias remove_derived_data="kill_xcode; rm -rf ~/Library/Developer/Xcode/DerivedData; open_xcode"
-alias lock="open -a ScreenSaverEngine"
+alias open_derived_data="open $DD"
+alias remove_derived_data="kill_xcode; rm -rf $DD; open_xcode"
+alias sleep="pmset sleepnow"
+alias reload_zshrc=". ~/.zshrc"
 
