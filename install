@@ -2,6 +2,14 @@
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
+if ! type "brew" > /dev/null; then
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+if [ ! -d $HOME/.oh-my-zsh ]; then
+	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+
 rm $HOME/.zshrc
 ln -s $DIR/.zshrc $HOME/.zshrc
 
