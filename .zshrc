@@ -41,4 +41,5 @@ alias open_derived_data="open $DD"
 alias remove_derived_data="kill_xcode; rm -rf $DD; open_xcode"
 alias sleep="pmset sleepnow"
 alias reload_zshrc=". ~/.zshrc"
+alias daily="mate $HOME/Daily/`date +'%Y'`/`date +'%m'`/`date +'%d'`.txt"
 
