@@ -5,11 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 export PATH=$PATH:/usr/local/bin:$HOME/.rvm/bin
 export WRK="$HOME/Workspace"
 export DOT="$WRK/dotfiles"
-export DD="~/Library/Developer/Xcode/DerivedData"
-
-# Set name of the theme to load
-# Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="mkarp"
+export DD="$HOME/Library/Developer/Xcode/DerivedData"
 
 # Disable auto-setting terminal title
 DISABLE_AUTO_TITLE="true"
@@ -31,7 +27,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 # Personal aliases
-alias zshrc="vim ~/.zshrc"
+alias zshrc="vim ~/.zshrc && . ~/.zshrc"
 alias wrk="cd $WRK"
 alias dot="cd $DOT"
 alias remove_dashboard="defaults write com.apple.dashboard mcx-disabled -boolean YES; killall Dock"
@@ -42,3 +38,10 @@ alias remove_derived_data="kill_xcode; rm -rf $DD; open_xcode"
 alias sleep="pmset sleepnow"
 alias reload_zshrc=". ~/.zshrc"
 
+# Theme
+PROMPT='%B$FG[034]%c $(git_prompt_info) %{$reset_color%}%b'
+
+ZSH_THEME_GIT_PROMPT_PREFIX="$FG[248]($FG[033]"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="$FG[248]) $FG[220]✗%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="$FG[248])"
