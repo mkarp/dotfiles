@@ -28,6 +28,7 @@ export LANG=en_US.UTF-8
 
 # Personal aliases
 alias zshrc="vim ~/.zshrc && . ~/.zshrc"
+alias gitconfig="vim ~/.gitconfig"
 alias wrk="cd $WRK"
 alias dot="cd $DOT"
 alias remove_dashboard="defaults write com.apple.dashboard mcx-disabled -boolean YES; killall Dock"
