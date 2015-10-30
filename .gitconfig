@@ -33,3 +33,7 @@
 [user]
   name = Mykhailo Karpenko
   email = me@mkarp.co
+  
+[core]
+  editor = vim
+
