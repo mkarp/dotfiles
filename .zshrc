@@ -41,7 +41,7 @@ alias remove_derived_data="kill_xcode; rm -rf $DD; open_xcode"
 alias remove_provisioning_profiles="kill_xcode; rm -rf $PP; open_xcode"
 alias sleep="pmset sleepnow"
 alias reload_zshrc=". ~/.zshrc"
-alias daily="mate $HOME/Daily/`date +'%Y'`/`date +'%m'`/`date +'%d'`.txt"
+alias daily="$EDITOR $HOME/Daily/`date +'%Y'`/`date +'%m'`/`date +'%d'`.txt"
 
 # Theme
 PROMPT='%B$FG[034]%c $(git_prompt_info) %{$reset_color%}%b'
