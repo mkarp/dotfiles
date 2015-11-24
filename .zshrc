@@ -43,6 +43,7 @@ alias sleep="pmset sleepnow"
 alias reload_zshrc=". ~/.zshrc"
 alias daily="$EDITOR $HOME/Daily/`date +'%Y'`/`date +'%m'`/`date +'%d'`.txt"
 alias update_dot="dot; g up; popd"
+alias reset_dns_cache="sudo killall -HUP mDNSResponder"
 
 # Theme
 PROMPT='%B$FG[034]%c $(git_prompt_info) %{$reset_color%}%b'
