@@ -1,6 +1,9 @@
 # Path to the oh-my-zsh installation
 export ZSH=$HOME/.oh-my-zsh
 
+# Theme
+ZSH_THEME="minimal"
+
 # User path configuration
 export PATH=$PATH:/usr/local/bin:$HOME/.rvm/bin
 export WRK="$HOME/Workspace"
@@ -45,10 +48,3 @@ alias daily="$EDITOR $HOME/Daily/`date +'%Y'`/`date +'%m'`/`date +'%d'`.txt"
 alias update_dot="dot; g up; popd"
 alias reset_dns_cache="sudo killall -HUP mDNSResponder"
 
-# Theme
-PROMPT='%B$FG[034]%c $(git_prompt_info) %{$reset_color%}%b'
-
-ZSH_THEME_GIT_PROMPT_PREFIX="$FG[248]($FG[033]"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="$FG[248]) $FG[220]✗%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="$FG[248])"
