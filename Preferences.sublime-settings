@@ -1,10 +1,10 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Mac Classic.tmTheme",
 	"draw_white_space": "all",
-	"font_size": 16.0,
 	"font_face": "Input Mono",
-	"highlight_line": true,
+	"font_size": 16.0,
 	"hide_minimap": true,
+	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"word_wrap": true
 }
