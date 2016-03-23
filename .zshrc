@@ -44,6 +44,7 @@ alias reload_zshrc=". ~/.zshrc"
 alias daily="$EDITOR $HOME/Daily/`date +'%Y'`/`date +'%m'`/`date +'%d'`.txt"
 alias update_dot="dot; g up; popd"
 alias reset_dns_cache="sudo killall -HUP mDNSResponder"
+alias create_osx_usb="sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app --nointeraction"
 
 # Theme
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[green]%}("
