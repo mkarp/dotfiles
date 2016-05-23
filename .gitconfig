@@ -16,7 +16,7 @@
   su = submodule update
   sur = submodule update --init --recursive
 
-  up = "!git remote update -p; git merge --ff-only @{u}"
+  up = "!git pull origin"
   pushup = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
   upsub = "!f() { cd $1 && git checkout master && git pull && git sur; }; f"
   upsuba = "!git submodule foreach 'git checkout master && git pull && git sur'"
@@ -24,6 +24,7 @@
   mm = "!f() { BRANCH=`git rev-parse --abbrev-ref HEAD` && git checkout master && git pull && git checkout $BRANCH && git merge master; }; f"
   ours = "!f() { git co --ours $@ && git add $@; }; f"
   theirs = "!f() { git co --theirs $@ && git add $@; }; f"
+  commit-undo = reset --soft HEAD~
 
 [color]
   ui = true
