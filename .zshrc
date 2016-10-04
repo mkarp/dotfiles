@@ -46,6 +46,8 @@ alias update_dot="dot; g up; popd"
 alias reset_dns_cache="sudo killall -HUP mDNSResponder"
 alias create_osx_usb="sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app --nointeraction"
 alias sortpb="pbpaste | sort -u | pbcopy"
+alias echopr="echo \"\$(git config --get remote.origin.url | sed -e 's/git@github.com:/https:\/\/github.com\//' | sed -e 's/\.git//')/compare/\$(git symbolic-ref --short HEAD)\""
+alias openpr="git pushup && open \$(echopr)"
 
 # Theme
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[green]%}("
@@ -53,14 +55,4 @@ ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[magenta]%}●%{$fg[green]%})%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_CLEAN=")%{$reset_color%} "
 
-vcs_status() {
-    if [[ $(whence in_svn) != "" ]] && in_svn; then
-        svn_prompt_info
-    elif [[ $(whence in_hg) != "" ]] && in_hg; then
-        hg_prompt_info
-    else
-        git_prompt_info
-    fi
-}
-
-PROMPT='%{$fg[blue]%}%1~%{$reset_color%} $(vcs_status)»%b '
+PROMPT='%{$fg[blue]%}%1~%{$reset_color%} $(git_prompt_info)»%b '
