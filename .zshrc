@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # User path configuration
-export PATH=$PATH:/usr/local/bin:$HOME/.rvm/bin
+export PATH=$PATH:/usr/local/bin:$HOME/.rbenv/bin
 export WRK="$HOME/Workspace"
 export DOT="$WRK/dotfiles"
 export DD="$HOME/Library/Developer/Xcode/DerivedData"
@@ -56,3 +56,6 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[magenta]%}●%{$fg[green]%})%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_CLEAN=")%{$reset_color%} "
 
 PROMPT='%{$fg[blue]%}%1~%{$reset_color%} $(git_prompt_info)»%b '
+
+# rbenv
+eval "$(rbenv init -)"
