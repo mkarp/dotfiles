@@ -18,7 +18,7 @@
   sur = submodule update --init --recursive
 
   up = "!git pull origin"
-  pushup = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
+  pu = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
   upsub = "!f() { cd $1 && git checkout master && git pull && git sur; }; f"
   upsuba = "!git submodule foreach 'git checkout master && git pull && git sur'"
   br = "!f() { git checkout master && git branch -D $1 && git branch $1 && git checkout $1; }; f"
