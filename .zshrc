@@ -47,7 +47,8 @@ alias reset_dns_cache="sudo killall -HUP mDNSResponder"
 alias create_osx_usb="sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app --nointeraction"
 alias sortpb="pbpaste | sort -u | pbcopy"
 alias echopr="echo \"\$(git config --get remote.origin.url | sed -e 's/git@github.com:/https:\/\/github.com\//' | sed -e 's/\.git//')/compare/\$(git symbolic-ref --short HEAD)\""
-alias openpr="git pushup && open \$(echopr)"
+alias openpr="git pu && open \$(echopr)"
+alias fix_xcode_comment_shortcut="sudo /usr/libexec/xpccachectl && sudo reboot"
 
 # Theme
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[green]%}("
