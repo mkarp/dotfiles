@@ -44,4 +44,3 @@
 [core]
   editor = vim
   excludesfile = ~/.gitignore
-
