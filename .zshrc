@@ -34,6 +34,7 @@ alias gitconfig="vim ~/.gitconfig"
 alias wrk="cd $WRK"
 alias dot="cd $DOT"
 alias remove_dashboard="defaults write com.apple.dashboard mcx-disabled -boolean YES; killall Dock"
+alias remove_desktop_icons="defaults write com.apple.finder CreateDesktop false; killall Finder"
 alias kill_xcode="killall Xcode"
 alias open_xcode="open /Applications/Xcode.app"
 alias open_derived_data="open $DD"
@@ -44,7 +45,7 @@ alias reload_zshrc=". ~/.zshrc"
 alias daily="$EDITOR $HOME/Daily/`date +'%Y'`/`date +'%m'`/`date +'%d'`.txt"
 alias update_dot="dot; g up; popd"
 alias reset_dns_cache="sudo killall -HUP mDNSResponder"
-alias create_osx_usb="sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app --nointeraction"
+alias create_macos_usb="sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/MISHA --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction"
 alias sortpb="pbpaste | sort -u | pbcopy"
 alias echopr="echo \"\$(git config --get remote.origin.url | sed -e 's/git@github.com:/https:\/\/github.com\//' | sed -e 's/\.git//')/compare/\$(git symbolic-ref --short HEAD)\""
 alias openpr="git pu && open \$(echopr)"
@@ -60,3 +61,6 @@ PROMPT='%{$fg[blue]%}%1~%{$reset_color%} $(git_prompt_info)»%b '
 
 # rbenv
 eval "$(rbenv init -)"
+
+# direnv
+eval "$(direnv hook zsh)"
