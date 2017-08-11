@@ -20,7 +20,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Specify plugins to load
 # Look in ~/.oh-my-zsh/custom/plugins/
-plugins=(gitfast brew gem osx web-search)
+plugins=(gitfast)
 
 # Load zsh
 source $ZSH/oh-my-zsh.sh
