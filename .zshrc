@@ -22,34 +22,14 @@ COMPLETION_WAITING_DOTS="true"
 # Look in ~/.oh-my-zsh/custom/plugins/
 plugins=(gitfast)
 
-# Load zsh
+# Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # Set the language environment
 export LANG=en_US.UTF-8
 
 # Personal aliases
-alias zshrc="vim ~/.zshrc && . ~/.zshrc"
-alias gitconfig="vim ~/.gitconfig"
-alias wrk="cd $WRK"
-alias dot="cd $DOT"
-alias remove_dashboard="defaults write com.apple.dashboard mcx-disabled -boolean YES; killall Dock"
-alias remove_desktop_icons="defaults write com.apple.finder CreateDesktop false; killall Finder"
-alias kill_xcode="killall Xcode"
-alias open_xcode="open /Applications/Xcode.app"
-alias open_derived_data="open $DD"
-alias remove_derived_data="kill_xcode; rm -rf $DD; open_xcode"
-alias remove_provisioning_profiles="kill_xcode; rm -rf $PP; open_xcode"
-alias sleep="pmset sleepnow"
-alias reload_zshrc=". ~/.zshrc"
-alias daily="$EDITOR $HOME/Daily/`date +'%Y'`/`date +'%m'`/`date +'%d'`.txt"
-alias update_dot="dot; g up; popd"
-alias reset_dns_cache="sudo killall -HUP mDNSResponder"
-alias create_macos_usb="sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/MISHA --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction"
-alias sortpb="pbpaste | sort -u | pbcopy"
-alias echopr="echo \"\$(git config --get remote.origin.url | sed -e 's/git@github.com:/https:\/\/github.com\//' | sed -e 's/\.git//')/compare/\$(git symbolic-ref --short HEAD)\""
-alias openpr="git pu && open \$(echopr)"
-alias fix_xcode_comment_shortcut="sudo /usr/libexec/xpccachectl && sudo reboot"
+source "$DOT/.shell_aliases"
 
 # Theme
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[green]%}("
@@ -64,3 +44,7 @@ eval "$(rbenv init -)"
 
 # direnv
 eval "$(direnv hook zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

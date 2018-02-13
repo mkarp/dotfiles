@@ -40,7 +40,16 @@
 [user]
   name = Mykhailo Karpenko
   email = me@mkarp.co
-  
+
 [core]
   editor = vim
   excludesfile = ~/.gitignore
+
+[credential]
+  helper = osxkeychain
+
+[filter "lfs"]
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f

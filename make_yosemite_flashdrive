@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-
-sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia --volume /Volumes/UNTITLED --applicationpath "/Applications/Install OS X Yosemite.app"
