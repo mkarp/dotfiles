@@ -1,3 +1,4 @@
+alias aliases="$EDITOR $DOT/.shell_aliases"
 alias bash_profile="$EDITOR ~/.bash_profile && reload_bash_profile"
 alias create_macos_usb="sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/MISHA --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction"
 alias daily="$EDITOR $HOME/Daily/`date +'%Y'`/`date +'%m'`/`date +'%d'`.txt"
@@ -9,6 +10,7 @@ alias ghpr="git push --set-upstream origin \$(git symbolic-ref --short HEAD) && 
 alias ghprurl="echo \"\$(ghurl)/compare/\$(git symbolic-ref --short HEAD)\""
 alias fix_xcode_comment_shortcut="sudo /usr/libexec/xpccachectl && sudo reboot"
 alias gitconfig="$EDITOR ~/.gitconfig"
+alias lrepl="lumo -c \`boot show -c\`"
 alias kill_xcode="killall Xcode"
 alias opendd="open $DD"
 alias pbsort="pbpaste | sort -u | pbcopy"
