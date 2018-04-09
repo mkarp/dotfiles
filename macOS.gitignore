@@ -1,11 +1,27 @@
---2017-12-19 18:46:12--  https://raw.githubusercontent.com/github/gitignore/master/Global/macOS.gitignore
-Resolving raw.githubusercontent.com... 151.101.112.133
-Connecting to raw.githubusercontent.com|151.101.112.133|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 292 [text/plain]
-Saving to: 'macOS.gitignore'
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
 
-     0K                                                       100% 9.28M=0s
+# Icon must end with two \r
+Icon
 
-2017-12-19 18:46:12 (9.28 MB/s) - 'macOS.gitignore' saved [402]
 
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
