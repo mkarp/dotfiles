@@ -1,5 +1,5 @@
-source "$SHELL_SECRETS"
 source "$HOME/Workspace/dotfiles/shell_constants.bash"
+source "$SHELL_SECRETS"
 source "$DOT/asare.bash"
 source "$DOT/contentful.bash"
 source "$DOT/git_completion.bash"
