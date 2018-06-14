@@ -1,5 +1,6 @@
 [alias]
   a = add
+  i = add -p
   s = status
   ss = status -s
   b = branch
@@ -26,6 +27,7 @@
   ours = "!f() { git co --ours $@ && git add $@; }; f"
   theirs = "!f() { git co --theirs $@ && git add $@; }; f"
   commit-undo = reset --soft HEAD~
+  wip = commit -am "WIP"
 
 [color]
   ui = true
