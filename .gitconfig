@@ -27,7 +27,7 @@
   ours = "!f() { git co --ours $@ && git add $@; }; f"
   theirs = "!f() { git co --theirs $@ && git add $@; }; f"
   commit-undo = reset --soft HEAD~
-  wip = commit -am "WIP"
+  wip = commit --allow-empty -am "WIP"
 
 [color]
   ui = true
@@ -46,6 +46,7 @@
 [core]
   editor = vim
   excludesfile = ~/.gitignore
+  autocrlf = input
 
 [credential]
   helper = osxkeychain
