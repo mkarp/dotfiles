@@ -2,9 +2,9 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # User path configuration
-source "$HOME/Workspace/dotfiles/.shell_constants"
-source "$DOT/.shell_aliases"
-source "$DOT/.shell_dev"
+source "$HOME/Workspace/dotfiles/constants"
+source "$DOT/aliases"
+source "$DOT/dev"
 
 # Disable auto-setting terminal title
 DISABLE_AUTO_TITLE="true"
@@ -35,3 +35,5 @@ PROMPT='%{$fg[blue]%}%1~%{$reset_color%} $(git_prompt_info)»%b '
 
 # direnv
 eval "$(direnv hook zsh)"
+
+alias refreshenv=". ~/.zshrc"

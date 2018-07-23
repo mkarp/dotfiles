@@ -1,4 +1,4 @@
-function ctf() {
+function ctf {
   if ! [ -f ~/.contentful.json ]; then
     echo "Please define ~/.contentful.json ..."
     return 1
