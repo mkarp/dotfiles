@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
 export DERIVED_DATA="$HOME/Library/Developer/Xcode/DerivedData"
-
