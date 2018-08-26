@@ -12,4 +12,3 @@ source "$DOT/git/autocomplete"
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export PATH="$DOT/bin:/usr/local/bin:${PATH}"
-

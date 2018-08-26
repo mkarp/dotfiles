@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
 echo "$(git config --get remote.origin.url | sed -e 's/git@github.com:/https:\/\/github.com\//' | sed -e 's/\.git//')"
-
