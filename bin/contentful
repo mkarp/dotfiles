@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 function ctf {
   if ! [ -f ~/.contentful.json ]; then
     echo "Please define ~/.contentful.json ..."
@@ -10,3 +11,4 @@ function ctf {
 
   curl "https://cdn.contentful.com/spaces/${SPACE_ID}/entries?access_token=${CDA_TOKEN}&content_type=${CONTENT_TYPE}" | jq ".items"
 }
+
