@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+kill_xcode; rm -rf $DD; open /Applications/Xcode.app
