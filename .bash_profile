@@ -3,14 +3,13 @@ source "$SHELL_SECRETS"
 source "$DOT/ps1"
 source "$DOT/git"
 source "$DOT/aliases"
-source "$DOT/python"
-source "$DOT/ruby"
-source "$DOT/node"
-source "$DOT/clojure"
-source "$DOT/xcode"
+source "$DOT/env/clojure"
+source "$DOT/env/node"
+source "$DOT/env/python"
+source "$DOT/env/ruby"
+source "$DOT/env/xcode"
 
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export PATH="$DOT/bin:/usr/local/bin:${PATH}"
 
-alias refreshenv=". ~/.bash_profile"

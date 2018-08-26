@@ -2,3 +2,4 @@ export WRK="$HOME/Workspace"
 export DOT="$WRK/dotfiles"
 export EDITOR="vim"
 export SHELL_SECRETS="$HOME/.shell_secrets"
+
