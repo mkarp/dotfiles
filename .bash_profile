@@ -6,6 +6,7 @@ source "$DOT/env/clojure"
 source "$DOT/env/node"
 source "$DOT/env/python"
 source "$DOT/env/ruby"
+source "$DOT/env/tmuxinator"
 source "$DOT/env/xcode"
 source "$DOT/git/autocomplete"
 
