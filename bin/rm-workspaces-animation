@@ -1,0 +1,1 @@
+defaults write com.apple.dock workspaces-swoosh-animation-off -bool YES

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+cd "$WRK/bullet" || exit 1
+TODAY="$(date +'%F').md"
+if [ ! -f "$TODAY" ]; then
+    PREVIOUS="$(ls | tail -n1)"
+    TITLE="$(date +'# %a, %b %d %Y')"
+    sed "1s/.*/$TITLE/" "$PREVIOUS" > "$TODAY"
+fi
+"$EDITOR" "$TODAY"
