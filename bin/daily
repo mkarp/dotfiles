@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-$EDITOR $WRK/daily/`date +'%Y'`/`date +'%m'`/`date +'%d'`.txt

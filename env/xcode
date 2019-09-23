@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
 export DERIVED_DATA="$HOME/Library/Developer/Xcode/DerivedData"
+export PATH="$HOME/.fastlane/bin:${PATH}"
+

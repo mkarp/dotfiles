@@ -7,8 +7,7 @@ source "$DOT/git/git-completion.bash"
 
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.local/bin:$HOME/.bin"
-export PATH="$DOT/bin:${PATH}"
+export PATH="$DOT/bin:$HOME/.local/bin:${PATH}"
 
 source "$DOT/env/clojure"
 source "$DOT/env/python"

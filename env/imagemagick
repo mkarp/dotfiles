@@ -1,1 +1,1 @@
-export PATH="/usr/local/opt/imagemagick/bin:$PATH"
+export PATH="/usr/local/opt/imagemagick/bin:${PATH}"

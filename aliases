@@ -1,5 +1,4 @@
-alias dot="cd $DOT"
-alias wrk="cd $WRK"
 alias refreshenv=". ~/.bash_profile"
 alias ll="ls -la"
+alias ip="curl icanhazip.com"
 

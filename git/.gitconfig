@@ -1,8 +1,8 @@
 [alias]
   a = add
   i = add -p
-  s = status
-  ss = status -s
+  s = status -s
+  ss = status
   b = branch
   ci = commit
   co = checkout
@@ -23,7 +23,8 @@
   upsub = "!f() { cd $1 && git checkout master && git pull && git sur; }; f"
   upsuba = "!git submodule foreach 'git checkout master && git pull && git sur'"
   br = "!f() { git checkout master && git branch -D $1 && git branch $1 && git checkout $1; }; f"
-  mm = "!f() { BRANCH=`git rev-parse --abbrev-ref HEAD` && git add . && git stash && git checkout master && git pull && git checkout $BRANCH && git merge master; }; f"
+  mm = "!f() { git add . && git stash && git checkout master && git pull && git checkout @{-1} && git merge master; }; f"
+  mr = "!f() { git add . && git stash && git checkout master && git pull && git checkout @{-1} && git rebase master; }; f"
   ours = "!f() { git co --ours $@ && git add $@; }; f"
   theirs = "!f() { git co --theirs $@ && git add $@; }; f"
   commit-undo = reset --soft HEAD~
