@@ -28,7 +28,11 @@
   ours = "!f() { git co --ours $@ && git add $@; }; f"
   theirs = "!f() { git co --theirs $@ && git add $@; }; f"
   commit-undo = reset --soft HEAD~
-  wip = commit --allow-empty -am "WIP"
+  wip = commit --allow-empty -am '[WIP]'
+  skip-ci = commit --allow-empty -am '[skip ci]'
+  empty = commit --allow-empty -am 'Empty commit for testing'
+  squash = "!git reset $(git merge-base master $(git branch --show-current))"
+  recentb = "!f() { git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset)' | head;}; f"
 
 [color]
   ui = true
@@ -36,18 +40,22 @@
 [push]
   default = simple
 
+[pull]
+  ff = only
+
 [filter "media"]
   clean = git-media-clean %f
   smudge = git-media-smudge %f
 
 [user]
-  name = Mykhailo Karpenko
-  email = me@mkarp.co
+	name = Misha Karpenko
+	email = mkarp@users.noreply.github.com
 
 [core]
   editor = vim
   excludesfile = ~/.gitignore
   autocrlf = input
+  protectNTFS = true
 
 [credential]
   helper = osxkeychain

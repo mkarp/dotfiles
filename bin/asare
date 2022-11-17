@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 function asare {
   asar e "$1"/Contents/Resources/app.asar "$1".out;
+  if test -f "$1"/Contents/Resources/app-x64.asar; then
+    asar e "$1"/Contents/Resources/app-x64.asar "$1"-x64.out;
+  fi
+  if test -f "$1"/Contents/Resources/app-arm64.asar; then
+    asar e "$1"/Contents/Resources/app-arm64.asar "$1"-arm64.out;
+  fi
 }
 asare $1
